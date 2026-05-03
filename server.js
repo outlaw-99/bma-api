@@ -42,7 +42,7 @@ app.post('/send-reset-email', async (req, res) => {
     const resetLink = await admin.auth().generatePasswordResetLink(email);
 
     await transporter.sendMail({
-      from    : '"BLACK MARKET" <' + process.env.BREVO_USER + '>',
+      from    : '"blackmarketassociationn@gmail.com" <' + process.env.BREVO_USER + '>',
       to      : email,
       subject : 'Reset your BLACK MARKET password',
       html    : `
